@@ -1,0 +1,21 @@
+.hidden{
+    display: none;
+}
+
+.highlight{
+    font-size: 45px;
+    font-weight: bold;
+    color:magenta;
+}
+
+.lg{
+    height: 90vh;
+}
+
+.md{
+    height: 40vh;
+}
+
+.sm{
+    height: 15vh;
+}
