@@ -23,7 +23,6 @@ const toggleImage = function(evt) {
 
     */
 
-
     // Use that ID to find my image tag
     let featureImage = document.getElementById(imgId);
 
@@ -35,39 +34,48 @@ const toggleImage = function(evt) {
         featureImage.src = '';
         featureImage.classList.add('hidden');
     }
-
     evt.preventDefault();
 }
 
+
 const assignListener = function(el) { // el is my parameter name for whatever HTMLElement is supplied
     // Setup the listener function for the click event
-
     el.addEventListener('click', toggleImage);
 }
+
 
 // forEach docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 // 1 forEach with Callback function
 // Callback function: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
 
-/*
 // Now, handling MORE <a class="feature"> elements!
 document.querySelectorAll('a.feature') // .querySelectorAll() will produce an Array of elements
     .forEach(assignListener); // loop through the array and call assignListener for each element
-*/
 
 
 // 2. forEach with Arrow function
+// aLink = document.querySelectorAll('a.feature')
 
-aLink.forEach(element => {
-    assignListener(element)
-});
+// aLink.forEach(element => {
+//     assignListener(element)
+// });
+
+// 3. for loop 
+// aLink = document.querySelectorAll('a.feature')
+
+// for (var i = 0; i <= aLink.length; i++) {
+//     assignListener(aLink[i])
+// }
 
 
 
-// 3 
-aLink = document.querySelectorAll('a.feature')
+// 4. We can also add event listener to each element like this. 
 
-for (var i = 0; i <= aLink.length; i++) {
-    assignListener(aLink[i])
-}
+// var Barcelona = document.querySelectorAll(a.feature)[0];
+// var vksjaldsa = document.querySelectorAll(a.feature)[1];
+// var bovir = document.querySelectorAll(a.feature)[2];
+
+// Barcelona.addEventListener('click', toggleImage)
+// vksjaldsa.addEventListener('click', toggleImage)
+// bovir.addEventListener('click', toggleImage)
